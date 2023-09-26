@@ -19,15 +19,12 @@ Per poder fer test amb Jest
 Inicialment ens centrarem en resoldre els problemes plantejats i que tenen per objectiu acabar de veure alguns aspectes bàsics de JS. Seguiu l'estructura proposada amb l'exemple kata0.js.
 
 <!-- prettier-ignore -->
-Act2_JS_Basics/
-├── kata0/
-│   ├── index.js
-│
-├── kata1/
-│   ├── index.js
-│
-├── kata2/
-│   ├── index.js
+- Act2_JS_Basics/
+  - kata0/
+    - index.js
+  - kata1/
+    - index.js
+
 
 Podeu anar canviant **l'script JS de l'index.html** per provar les diferents kata's
 
@@ -188,7 +185,7 @@ Tests:
 tree.getFruit(); // 'apple'
 ```
 
-#### Kata #7. Factoria d'objectes
+### Kata #7. Factoria d'objectes
 
 #### Kata #7.1
 
