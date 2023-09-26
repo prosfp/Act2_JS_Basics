@@ -1,3 +1,390 @@
-# Act2_JS_Basics
+# Act2_JS_Basics - Kata de Dojo's
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-ddzqwu)
+Farem servir aquest repositori per:
+
+1. Dur a terme els propers reptes en forma de "Kata's" en referència a la demostració de moviments del Judo. Són les habilitats, "skills", per poder convertir-nos en programadors web!
+
+2. Instal·larem també els paquets i els "bundlers" (recursos que ens faciliten la vida quan a dependències) necessaris per poder per exemple testejar el nostre codi o dur-lo finalment a producció en etapes posteriors. Això ens permetrà tenir una plantilla sobre la que desenvolupar diferents projectes.
+
+## Comencem!
+
+D'entrada el primer que hauries de fer és tenir aquest repositori en local. Si has acceptat el repte ("assignment") a través de l'enllaç de la tasca, clona'l a local per tal de poder treballar més còmodament.
+
+## Tooling (pendent)
+
+Per poder fer test amb Jest
+
+### Estructura d'arxius
+
+Inicialment ens centrarem en resoldre els problemes plantejats i que tenen per objectiu acabar de veure alguns aspectes bàsics de JS. Seguiu l'estructura proposada amb l'exemple kata0.js.
+
+<!-- prettier-ignore -->
+Act2_JS_Basics/
+├── kata0/
+│   ├── index.js
+│
+├── kata1/
+│   ├── index.js
+│
+├── kata2/
+│   ├── index.js
+
+Podeu anar canviant **l'script JS de l'index.html** per provar les diferents kata's
+
+## Katas
+
+### Kata #1. Suma dels elements positius d’un array
+
+Implementa la funció `sumPositiveElements(Array)` que rep un array d'enters com a argument i retorna la suma total dels elements positius.
+
+```javascript
+function sumPositiveElements(arr) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+sumPositiveElements([]); // 0
+sumPositiveElements([1, 2, 3, 4, 5]); // 15
+sumPositiveElements([1, -2, 3, 4, 5]); // 13
+sumPositiveElements([-1, 2, 3, 4, -5]); // 9
+sumPositiveElements([-1, -2, -3, -4, -5]); // 0
+```
+
+### Kata #2. Repeteix un string
+
+Implementa la funció `repeatString(String, Number)` que rep un string i un número com a arguments, i retorna un string que conté l'string argument repetit el número de cops indicat per l'argument numèric.
+
+```javascript
+function repeatString(str, num) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+repeatString("JavaScript", 0); // ''
+repeatString("university", 1); // 'university'
+repeatString("hello", 3); // 'hellohellohello'
+repeatString("?", 10); // '??????????'
+```
+
+### Kata #3. Elimina el primer i l’últim caràcter
+
+Implementa la funció `removeFirstAndLast(String)` que rep un string com a argument i retorna l'string argument però sense el seu primer i últim caràcter, obviant els strings amb 2 o menys caràcters.
+
+```javascript
+function removeFirstAndLast(str) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+removeFirstAndLast("JavaScript"); // 'avaScrip'
+removeFirstAndLast("Alexandria"); // 'lexandri'
+removeFirstAndLast("hydrogen"); // 'ydroge'
+removeFirstAndLast("ok"); // 'ok'
+```
+
+### Kata #4. Elimina els espais en blanc
+
+Implementa la funció `removeSpaces(String)` que rep un string com a argument i retorna l'string argument sense espais en blanc.
+
+```javascript
+function removeSpaces(str) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+removeSpaces("good morning"); // 'goodmorning'
+removeSpaces(" carrot cake "); // 'carrotcake'
+removeSpaces("the abbot gave rice to the fox"); // 'theabbotgavericetothefox'
+```
+
+### Kata #5. Scope i closure
+
+Ja hem vist el concepte d'Scope i com les principals variables a JS (let i const) son "bloc-scope". Per exemple, si declarem una variable let o const dins d'un bloc de codi (com ara un bucle for o una funció), aquesta variable només serà accessible dins d'aquest bloc de codi i no serà visible fora d'aquest bloc. Això ajuda a evitar errors i a mantenir el codi més net i estructurat.
+
+Un closure és una funció que "envolta" una altra funció i que té accés a les variables locals d'aquesta funció, fins i tot després que la funció original hagi finalitzat l'execució. Això és possible perquè el closure "captura" les variables locals de la funció original i les manté en memòria, de manera que es poden utilitzar en el futur.
+
+En aquesta kata, heu de crear una funció counter que retorna una funció anomenada increment. La funció increment ha de mantenir un comptador intern que s'incrementa cada vegada que es crida, i ha de mostrar el valor del comptador per consola.
+
+Quan lat tingueu, haurieu de poder cridar diverses vegades a la funció counter() i el resultat hauria de ser:
+
+```javascript
+const c = counter();
+c(); // logs 1
+c(); // logs 2
+c(); // logs 3
+```
+
+### Kata #6. Objectes
+
+Anem a insistir sobre alguns aspectes bàsics de la creació d'objectes i entendre el concepte de "getters" i setters"
+
+#### Kata #6.1
+
+Implementa l'objecte `tree` amb les propietats `species` amb valor "appleTree" i `fruit` amb valor "apple".
+
+```javascript
+const tree = {
+  species: "appleTree",
+  fruit: "apple",
+};
+```
+
+Tests:
+
+```javascript
+tree.species; // 'appleTree'
+tree.fruit; // 'apple'
+```
+
+#### Kata #6.2
+
+Implementa una funció `getFruit(tree)` que donat un objecte `tree` obtingui el valor de la seva propietat `fruit`. Busca que fa el mètode "hasOwnProperty" propia d'un objecte i fes-la servir:
+
+```javascript
+function getFruit(tree) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+getFruit(tree); // 'apple'
+```
+
+#### Kata #6.3
+
+Modifica la funció anterior perquè estigui implementada dins de l'objecte `tree`, és a dir, esdevingui un mètode.
+
+<!-- prettier-ignore -->
+!!! warning **this**
+    Revisa [this - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/this), integra-ho en el teu codi i explica com funciona.
+
+```javascript
+const tree = {
+  species: "appleTree",
+  fruit: "apple",
+  getFruit() {
+    // Escriu aquí la teva solució
+  },
+};
+```
+
+Tests:
+
+```javascript
+tree.getFruit(); // 'apple'
+```
+
+#### Kata #7. Factoria d'objectes
+
+#### Kata #7.1
+
+Implementa la funció `plantTree(species, fruit)` que s'invoca passant-li dos arguments (species i fruit) i retorna un objecte amb aquests valors per a aquestes mateixes propietats. Fes les validacions necessàries.
+
+```javascript
+function plantTree(species, fruit) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+plantTree("pearTree", "pear"); // { species: 'pearTree', fruit: 'pear' }
+```
+
+#### Kata #7.2
+
+Modifica la funció anterior per afegir els mètodes `getFruit` i `getSpecies` a l'objecte retornat.
+
+```javascript
+function plantTree(species, fruit) {
+  // Escriu aquí la teva solució
+}
+```
+
+Tests:
+
+```javascript
+const tree = plantTree("pearTree", "pear");
+tree.getFruit(); // 'pear'
+tree.getSpecies(); // 'pearTree'
+```
+
+#### Kata #7.3
+
+Modifica l'objecte `tree` de manera que les propietats `fruit` i `species` siguin getters.
+
+```javascript
+const tree = {
+  get species() {
+    // Escriu aquí la teva solució
+  },
+  get fruit() {
+    // Escriu aquí la teva solució
+  },
+};
+```
+
+Tests:
+
+```javascript
+tree.fruit; // 'pear'
+tree.species; // 'pearTree'
+```
+
+#### Kata #7.4
+
+Afegeix els setters `setFruit` i `setSpecies` a l'objecte `tree`.
+
+```javascript
+const tree = {
+  set fruit(value) {
+    // Escriu aquí la teva solució
+  },
+  set species(value) {
+    // Escriu aquí la teva solució
+  },
+  get fruit() {
+    // Escriu aquí la teva solució
+  },
+  get species() {
+    // Escriu aquí la teva solució
+  },
+};
+```
+
+Tests:
+
+```javascript
+tree.fruit = "apple";
+tree.fruit; // 'apple'
+tree.species = "appleTree";
+tree.species; // 'appleTree'
+```
+
+### Kata #8: Prototip
+
+El prototip (en aquest cas d'String) és l'objecte que conté mètodes i propietats que s'apliquen a totes les instàncies de la classe (per ex. String)
+
+Això significa que qualsevol cadena que es crea en JavaScript hereta les propietats i mètodes del prototip d'String.
+
+Volem afegir una funció nova a String. Pots decidir ser una mica original i fer una proposta pròpia. Si no jo et proposo el següent:
+
+Implementa una funció que, donat un string amb diverses frases (separades per punt), que "capitalitzi" la primera lletra de cadascuna de les frases, és a dir, la posi en majúscula.
+
+Un cop la tinguis, afegeix-la com al prototip d'String i comprova que funciona:
+
+```javascript
+String.prototype.mevaFuncio = function () {
+  // Escriu aquí la teva proposta
+};
+```
+
+Tests:
+
+```javascript
+const frase = "la meva primera frase. la meva segona frase";
+tree.mevaFuncio(frase); // Ha de mostrar "La meva primera frase. La meva segona frase."
+```
+
+### Kata #9. Gestió d'errors
+
+<!-- prettier-ignore -->
+!!! Warning
+    La gestió d'errors a JavaScript es fa mitjançant les sentències **try, catch i throw**. Aquestes sentències permeten als desenvolupadors controlar els errors que es produeixen durant l'execució del codi i proporcionar una resposta adequada.
+
+La sentència **try** s'utilitza per envoltar el codi que pot generar un error. Si es produeix un error dins del bloc try, el control es transfereix al bloc catch. El bloc catch conté el codi que s'executa quan es produeix un error.
+
+La sentència **throw** s'utilitza per llançar un error manualment. Això permet als desenvolupadors crear errors personalitzats i proporcionar informació detallada sobre l'error.
+
+```javascript
+function divideix(a, b) {
+  if (b === 0) {
+    throw new Error("No es pot dividir per zero");
+  }
+  return a / b;
+}
+
+try {
+  const result = divide(10, 0);
+  console.log(result);
+} catch (error) {
+  console.error(error.message);
+}
+```
+
+En aquest exemple, definim una funció divide que divideix dos nombres.
+
+- Si el segon nombre és zero, llancem un error utilitzant la sentència throw.
+- Envoltem la funció divide amb una sentència try.
+- Si es produeix un error dins de la funció divide, el control es transfereix al bloc catch, on mostrem un missatge d'error per consola.
+
+Recupera el codi de la Kata 7. Afegiu la següent línia de codi a la comprovació del tipus en els setters `setFruit` i 'setSpecies per llançar un error.
+
+```javascript
+throw new Error();
+```
+
+Tests:
+
+```javascript
+try {
+  tree.setFruit(12);
+} catch (error) {
+  // Comprovar que es llança un error
+}
+```
+
+Each kata includes a set of tests that can be run using [Jest](https://jestjs.io/). To run the tests for a specific kata, navigate to the kata's directory and run the following command:
+
+### Kata #10. RegExp
+
+L'ús d’expressions regulars és habitual a JavaScript per tal de detectar patrons dins de cadenes de
+text. Als nostres exercicis ens prendrem algunes llicències per a generalitzar el nom de l'espècie i de
+la fruta. Abans de validar un canvi mitjançant setters, anem a validar la fruita respecte a l’espècie.
+
+Per ex:
+
+- poma - pomer OK
+- pera - perera OK
+- taronja - taronger OK
+- nou - noguera KO
+
+Dels tres primers casos observem que es repeteixen les 3 primeres lletres de l'espècie també a la
+fruita. Aquesta serà la comprovació que farem al nostre setter.
+
+Ha de complir els següents tests:
+
+- Al crear un arbre amb els valors "poma" i "pomer", si invoquem posteriorment setFruit amb el valor "pera", el mètode llança un error i manté el seu valor previ.
+
+- Al crear un arbre amb els valors "perera" i "poma" i invocar posteriorment setFruit amb el valor pera, el mètode modifica el valor de la propietat fruit.
+
+### Kata #11. Objectes de l'entorn del navegador
+
+Fes una ullada al recurs de classe [Interacció amb el navegador de JS](https://prosfp.github.io/DAW_MP06/UF1/UF1.3/UF1.3.7_Browser_Objects/)
+
+A continuació et proposo el següents reptes:
+
+- **Crea una pàgina HTML** senzilla amb un botó que digui "Obre Finestra Emergent". Utilitza l'objecte window per obrir una finestra emergent (popup) quan es fa clic al botó. Personalitza la mida i la posició de la finestra emergent i permet que l'usuari pugui introduir la URL amb que s'obrirà.
+
+- **Alerta amb Window:** Afegeix un altre botó que digui "Mostra Alerta". Utilitza l'objecte window per mostrar una alerta (finestra emergent d'alerta) amb un missatge quan es fa clic al botó. Informació de Navegador amb navigator:
+
+- Crea una secció a la pàgina que mostri **informació sobre el navegador de l'usuari**. Amb **Navigator** pots accedir a propietats com userAgent, platform, language, etc., i mostra aquestes dades a la pàgina. També dona a conèixer les extensions instal·lades a l'ordinador.
+
+- **Canviar el Títol de la Pàgina amb document:** Afegeix un camp d'entrada de text i un botó. Utilitza l'objecte **document** per canviar el títol de la pàgina quan es fa clic al botó. El nou títol ha de ser el text introduït per l'usuari al camp d'entrada. Redireccionar amb location:
+
+- Afegeix un altre botó que digui "Ves a Google". Utilitza l'objecte **location** per redirigir l'usuari a la pàgina d'inici de Google quan es fa clic al botó. Comprova si l'usuari està connectat a Internet abans de redirigir-lo.
