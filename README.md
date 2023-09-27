@@ -384,3 +384,92 @@ A continuació et proposo el següents reptes:
 - **Canviar el Títol de la Pàgina amb document:** Afegeix un camp d'entrada de text i un botó. Utilitza l'objecte **document** per canviar el títol de la pàgina quan es fa clic al botó. El nou títol ha de ser el text introduït per l'usuari al camp d'entrada. Redireccionar amb location:
 
 - Afegeix un altre botó que digui "Ves a Google". Utilitza l'objecte **location** per redirigir l'usuari a la pàgina d'inici de Google quan es fa clic al botó. Comprova si l'usuari està connectat a Internet abans de redirigir-lo.
+
+### Kata #12. Classes
+
+Les **classes** són plantilles per als objectes.
+
+Javascript crida un **mètode constructor** quan creem una nova instància d'una classe.
+
+**Herència** és quan creem una classe pare amb propietats i mètodes que podem estendre a les classes filles.
+
+Utilitzem la paraula clau **extends** per crear una subclasse.
+
+La paraula clau **super** crida el constructor() d'una classe pare.
+
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} fa un soroll.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  speak() {
+    console.log(`${this.name} fa guau guau.`);
+  }
+}
+
+const myDog = new Dog("Bobby");
+myDog.speak(); // Output: "Bobby fa guau guau."
+```
+
+A DESENVOLUPAR:
+
+###Catàleg Educació
+
+El Departament d'Educació vol un catàleg de referència ràpida per a cada escola del territori.
+
+Hem de crear classes per a escoles primàries i secundàries. Ja que aquestes classes comparteixen propietats i mètodes, cadascuna heretarà de la classe pare "Escola". Les classes pare i els tres fills tenen les següents propietats, getters, setters i mètodes:
+
+**Escola**
+
+- Propietats: nom (string), nivell (string: 'primària', 'secundària' o 'batxillerat') i nombreEstudiants (nombre)
+- Getters: totes les propietats tenen getters
+- Setters: la propietat nombre d'estudiants té un setter
+- Mètodes: .informacioRapida() i .professorSubstitut( (aquest és un mètode estàtic)
+
+**Primaria**
+
+- Inclou tot el que té la classe Escola, més una propietat addicional
+- Propietats: politicaMenjador (string)
+
+**Secundària**
+
+- No inclou cap propietat o mètode addicional
+
+**Batxillerat**
+
+- Inclou tot el que té la classe Escola, més una propietat addicional
+- Propietats: equipsEsportius (array d'strings)
+
+Crea el constructor() i els getters per a les quatre classes anteriors.
+
+####1a Part
+
+1. Crear Classe Escola Mare: Comencem creant una classe mare per a les classes Primària, Secundària i Batxillerat. Crea una classe buida anomenada "Escola".
+
+2. Dins la classe Escola, crea un constructor() buit que accepti tres paràmetres. Els noms d'aquests paràmetres han de coincidir amb les propietats que s'han llistat.
+
+3. Dins el constructor(), estableix les propietats de l'Escola. Afegix un guió baix (\_) davant de totes les propietats.
+
+4. Crea getters per a les propietats nom, nivell i nombre d'estudiants. Cada getter ha de retornar el valor emmagatzemat a la propietat.
+
+5. Crea un setter per a nombre d'estudiants. El mètode ha de comprovar primer si l'entrada (nouNombreEstudiants) és un nombre. Si és un nombre, aleshores estableix la propietat nombre d'estudiants. Si no ho és, registra el missatge 'Entrada no vàlida: el nombre d'estudiants ha de ser un nombre.'
+
+6. Sota els teus getters, crea un mètode anomenat informacioRapida que enregistri la següent cadena al console: "L'ESCOLA NOM educa a NOMBRE D'ESTUDIANTS estudiants al nivell escolar NIVELL".
+   (fes les substitucions per variables que toquin)
+
+7. Sota .informacioRapida(), crea un mètode estàtic anomenat professorSubstitut. Aquest mètode rebrà un paràmetre, anomenat professorsSuplents. El paràmetre professorsSuplents acceptarà un array d'Strings.
+
+Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplents. Utilitza aquest número per accedir i retornar el professor suplent a l'índex generat aleatòriament.
+
+###2a Part... to be continued...
