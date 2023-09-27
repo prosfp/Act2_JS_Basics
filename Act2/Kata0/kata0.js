@@ -1,4 +1,4 @@
-export default function sumatorio(num) {
+function sumatorio(num) {
   let sumatorio = 0;
   let valorActual = num;
   while (valorActual !== 0) {
@@ -11,3 +11,5 @@ export default function sumatorio(num) {
   //console.log(sumatorio);
   return sumatorio;
 }
+
+module.exports = { sumatorio };

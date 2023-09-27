@@ -1,4 +1,4 @@
-import sumatorio from "./kata0";
+const { sumatorio } = require("./kata0");
 
 describe("kata #0: sumatorio", () => {
   test("de 0 es 0", () => {

@@ -1,0 +1,27 @@
+{
+  "name": "my-act2-js-basics-project",
+  "version": "1.0.0",
+  "description": "Projecte de Kata's",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prosfp/Act2_JS_Basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prosfp/Act2_JS_Basics/issues"
+  },
+  "homepage": "https://github.com/prosfp/Act2_JS_Basics#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
