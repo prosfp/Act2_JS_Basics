@@ -21,10 +21,9 @@ Inicialment ens centrarem en resoldre els problemes plantejats i que tenen per o
 <!-- prettier-ignore -->
 - Act2_JS_Basics/
   - kata0/
-    - index.js
+    - kata0.js
   - kata1/
-    - index.js
-
+    - kata1.js
 
 Podeu anar canviant **l'script JS de l'index.html** per provar les diferents kata's
 
