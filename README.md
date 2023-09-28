@@ -486,9 +486,32 @@ Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplen
 
 6. Com que la nostra classe "Primaria" hereta les propietats i getters de "Escola", només hem de crear un nou getter a la classe "Primaria". Afegeix aquest getter a la classe "Primaria". Cada getter ha de retornar el valor emmagatzemat a aquesta propietat.
 
-A continuació, t'atreveixes amb la classe "Secundaira" i "Batxillerat" que hereta de la classe "Escola" també? A més de les propietats, els getters i els mètodes de "Escola", la classe "Secundaria" inclou:
+A continuació, t'atreveixes amb la classe "Secundaria" i "Batxillerat" que hereta de la classe "Escola" també? A més de les propietats, els getters i els mètodes de "Escola", la classe "Batxillerat" inclou:
 
-- Propietats: "sportsTeams" (conjunt de cadenes de text).
-- Getters: Un getter per al conjunt "sportsTeams". El getter ha de registrar totes les disciplines esportives al console.
+- Propietats: "equipsEsportius" (array d'strings)
+
+- Getters: Un getter per al conjunt "equipsEsportius". El getter ha de mostrar tots els euips o disciplines esportives al console.
 
 ### 3a Part
+
+Anem a crear **instàncies** de la nostra classe. Recordem que això ens permet crear múltiples objectes amb les mateixes propietats i mètodes. Cada instància d'una classe és un objecte amb el seu propi estat, i que per tant es poden tenir objectes amb diferents valors per les seves propietats.
+
+1. Comencem amb una escola de primària:
+
+- Nom: Fortià Solà
+- \# d'estudiants: 346
+- Menjadors: "Menjador propi. Menú vegetarià opcional."
+
+2. Crida a ".informacioRapida" de la teva nova instància.
+
+3. Es necessita un substitut per l'escola. Crida al mètode estàtic ".professorSubstitut" i passa-li una llista de candidats (['Joan', 'Maria', 'Pep']). Des d'on el crides?
+
+4. Anem ara a un cas de batxillerat:
+
+- Nom: INS Cirviànum
+- \# d'estudiants: 120
+- Esports: ["Futbol","Basquet","Escacs","Tennis Taula"]
+
+5. Comprova que pots obtenir el llistat de disciplines esportives!
+
+# GOOD JOOOOOOB!!!
