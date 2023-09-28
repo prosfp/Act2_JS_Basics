@@ -62,10 +62,10 @@ function repeatString(str, num) {
 Tests:
 
 ```javascript
-repeatString("JavaScript", 0); // ''
-repeatString("university", 1); // 'university'
-repeatString("hello", 3); // 'hellohellohello'
-repeatString("?", 10); // '??????????'
+repeatString('JavaScript', 0); // ''
+repeatString('university', 1); // 'university'
+repeatString('hello', 3); // 'hellohellohello'
+repeatString('?', 10); // '??????????'
 ```
 
 ### Kata #3. Elimina el primer i l’últim caràcter
@@ -81,10 +81,10 @@ function removeFirstAndLast(str) {
 Tests:
 
 ```javascript
-removeFirstAndLast("JavaScript"); // 'avaScrip'
-removeFirstAndLast("Alexandria"); // 'lexandri'
-removeFirstAndLast("hydrogen"); // 'ydroge'
-removeFirstAndLast("ok"); // 'ok'
+removeFirstAndLast('JavaScript'); // 'avaScrip'
+removeFirstAndLast('Alexandria'); // 'lexandri'
+removeFirstAndLast('hydrogen'); // 'ydroge'
+removeFirstAndLast('ok'); // 'ok'
 ```
 
 ### Kata #4. Elimina els espais en blanc
@@ -100,9 +100,9 @@ function removeSpaces(str) {
 Tests:
 
 ```javascript
-removeSpaces("good morning"); // 'goodmorning'
-removeSpaces(" carrot cake "); // 'carrotcake'
-removeSpaces("the abbot gave rice to the fox"); // 'theabbotgavericetothefox'
+removeSpaces('good morning'); // 'goodmorning'
+removeSpaces(' carrot cake '); // 'carrotcake'
+removeSpaces('the abbot gave rice to the fox'); // 'theabbotgavericetothefox'
 ```
 
 ### Kata #5. Scope i closure
@@ -132,8 +132,8 @@ Implementa l'objecte `tree` amb les propietats `species` amb valor "appleTree" i
 
 ```javascript
 const tree = {
-  species: "appleTree",
-  fruit: "apple",
+  species: 'appleTree',
+  fruit: 'apple',
 };
 ```
 
@@ -170,8 +170,8 @@ Modifica la funció anterior perquè estigui implementada dins de l'objecte `tre
 
 ```javascript
 const tree = {
-  species: "appleTree",
-  fruit: "apple",
+  species: 'appleTree',
+  fruit: 'apple',
   getFruit() {
     // Escriu aquí la teva solució
   },
@@ -199,7 +199,7 @@ function plantTree(species, fruit) {
 Tests:
 
 ```javascript
-plantTree("pearTree", "pear"); // { species: 'pearTree', fruit: 'pear' }
+plantTree('pearTree', 'pear'); // { species: 'pearTree', fruit: 'pear' }
 ```
 
 #### Kata #7.2
@@ -215,7 +215,7 @@ function plantTree(species, fruit) {
 Tests:
 
 ```javascript
-const tree = plantTree("pearTree", "pear");
+const tree = plantTree('pearTree', 'pear');
 tree.getFruit(); // 'pear'
 tree.getSpecies(); // 'pearTree'
 ```
@@ -266,9 +266,9 @@ const tree = {
 Tests:
 
 ```javascript
-tree.fruit = "apple";
+tree.fruit = 'apple';
 tree.fruit; // 'apple'
-tree.species = "appleTree";
+tree.species = 'appleTree';
 tree.species; // 'appleTree'
 ```
 
@@ -293,7 +293,7 @@ String.prototype.mevaFuncio = function () {
 Tests:
 
 ```javascript
-const frase = "la meva primera frase. la meva segona frase";
+const frase = 'la meva primera frase. la meva segona frase';
 tree.mevaFuncio(frase); // Ha de mostrar "La meva primera frase. La meva segona frase."
 ```
 
@@ -310,7 +310,7 @@ La sentència **throw** s'utilitza per llançar un error manualment. Això perme
 ```javascript
 function divideix(a, b) {
   if (b === 0) {
-    throw new Error("No es pot dividir per zero");
+    throw new Error('No es pot dividir per zero');
   }
   return a / b;
 }
@@ -418,7 +418,7 @@ class Dog extends Animal {
   }
 }
 
-const myDog = new Dog("Bobby");
+const myDog = new Dog('Bobby');
 myDog.speak(); // Output: "Bobby fa guau guau."
 ```
 
@@ -472,4 +472,23 @@ Crea el constructor() i els getters per a les quatre classes anteriors.
 
 Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplents. Utilitza aquest número per accedir i retornar el professor suplent a l'índex generat aleatòriament.
 
-###2a Part... to be continued...
+### 2a Part
+
+1. Crea una classe buida "Primaria" que hereti de "Escola".
+
+2. Dins la classe "Primaria ", crea un constructor() que accepti tres arguments.
+
+3. Fes una crida a "super" a la primera línia del constructor de "Primaria". Passeu-hi qualsevol argument que utilitzi el constructor pare.
+
+4. Ja que aquesta és la classe "Primaria", passa 'primaria' com a argument pel paràmetre "nivell" en el constructor pare.
+
+5. Utilitza l'argument restant per establir la propietat "politicaMenjador".
+
+6. Com que la nostra classe "Primaria" hereta les propietats i getters de "Escola", només hem de crear un nou getter a la classe "Primaria". Afegeix aquest getter a la classe "Primaria". Cada getter ha de retornar el valor emmagatzemat a aquesta propietat.
+
+A continuació, t'atreveixes amb la classe "Secundaira" i "Batxillerat" que hereta de la classe "Escola" també? A més de les propietats, els getters i els mètodes de "Escola", la classe "Secundaria" inclou:
+
+- Propietats: "sportsTeams" (conjunt de cadenes de text).
+- Getters: Un getter per al conjunt "sportsTeams". El getter ha de registrar totes les disciplines esportives al console.
+
+### 3a Part
