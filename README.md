@@ -476,7 +476,7 @@ Crea el constructor() i els getters per a les quatre classes anteriors.
 
 2. Dins la classe "Primaria ", crea un constructor() que accepti tres arguments.
 
-3. Fes una crida a "super" a la primera línia del constructor de "PrimarySchool". Passeu-hi qualsevol argument que utilitzi el constructor pare.
+3. Fes una crida a "super" a la primera línia del constructor de "Primaria". Passeu-hi qualsevol argument que utilitzi el constructor pare.
 
 4. Ja que aquesta és la classe "Primaria", passa 'primaria' com a argument pel paràmetre "nivell" en el constructor pare.
 
