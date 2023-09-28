@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "my-project",
   "version": "1.0.0",
   "description": "My project description",
@@ -12,4 +13,24 @@
   "devDependencies": {
     "jest": "^29.7.0"
   }
+=======
+  "name": "Act2_JS_Basics",
+  "version": "1.0.0",
+  "description": "Farem servir aquest repositori per:",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prosfp/Act2_JS_Basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prosfp/Act2_JS_Basics/issues"
+  },
+  "homepage": "https://github.com/prosfp/Act2_JS_Basics#readme"
+>>>>>>> c71250b4834b8464db61d3a8335d39531499880d
 }
