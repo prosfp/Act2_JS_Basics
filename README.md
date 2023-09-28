@@ -424,7 +424,7 @@ myDog.speak(); // Output: "Bobby fa guau guau."
 
 A DESENVOLUPAR:
 
-###Catàleg Educació
+### Catàleg Educació
 
 El Departament d'Educació vol un catàleg de referència ràpida per a cada escola del territori.
 
