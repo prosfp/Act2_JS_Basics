@@ -60,3 +60,48 @@ class Primaria extends Escola {
     }
   }
 }
+
+class Batxillerat extends Escola {
+  constructor(nom, nombreEstudiants, equipsEsportius) {
+    super(nom, 'batxillerat', nombreEstudiants);
+    this._equipsEsportius = equipsEsportius;
+  }
+
+  get equipsEsportius() {
+    for (let i = 0; i < this._equipsEsportius.length; i++) {
+      console.log(this._equipsEsportius[i]);
+    }
+    return this._equipsEsportius;
+  }
+
+  set equipsEsportius(nousEquipsEsportius) {
+    if (Array.isArray(nousEquipsEsportius)) {
+      this._equipsEsportius = nousEquipsEsportius;
+    } else {
+      console.error('Els equips esportius han de ser un array.');
+    }
+  }
+}
+
+// Instanciació d'una escola de primaria
+
+const escolaFortiaSola = new Primaria(
+  'Fortià Solà',
+  200,
+  'Menjador propi. Menú vegetarià opcional.'
+);
+
+escolaFortiaSola.informacioRapida();
+
+Escola.professorSubstitut(['Joan', 'Maria', 'Pep']);
+
+// Instanciació d'una escola de batxillerat
+
+const insCirvianum = new Batxillerat('INS Cirviànum', 120, [
+  'Futbol',
+  'Basquet',
+  'Escacs',
+  'Tennis Taula',
+]);
+
+insCirvianum.equipsEsportius;
