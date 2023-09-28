@@ -453,7 +453,7 @@ Hem de crear classes per a escoles primàries i secundàries. Ja que aquestes cl
 
 Crea el constructor() i els getters per a les quatre classes anteriors.
 
-####1a Part
+#### 1a Part
 
 1. Crear Classe Escola Mare: Comencem creant una classe mare per a les classes Primària, Secundària i Batxillerat. Crea una classe buida anomenada "Escola".
 
@@ -468,8 +468,25 @@ Crea el constructor() i els getters per a les quatre classes anteriors.
 6. Sota els teus getters, crea un mètode anomenat informacioRapida que enregistri la següent cadena al console: "L'ESCOLA NOM educa a NOMBRE D'ESTUDIANTS estudiants al nivell escolar NIVELL".
    (fes les substitucions per variables que toquin)
 
-7. Sota .informacioRapida(), crea un mètode estàtic anomenat professorSubstitut. Aquest mètode rebrà un paràmetre, anomenat professorsSuplents. El paràmetre professorsSuplents acceptarà un array d'Strings.
+7. Sota .informacioRapida(), crea un mètode estàtic anomenat professorSubstitut. Aquest mètode rebrà un paràmetre, anomenat professorsSuplents. El paràmetre professorsSuplents acceptarà un array d'Strings. Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplents. Utilitza aquest número per accedir i retornar el professor suplent a l'índex generat aleatòriament.
 
-Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplents. Utilitza aquest número per accedir i retornar el professor suplent a l'índex generat aleatòriament.
+### 2a Part
 
-###2a Part... to be continued...
+1. Crea una classe buida "Primaria" que hereti de "Escola".
+
+2. Dins la classe "Primaria ", crea un constructor() que accepti tres arguments.
+
+3. Fes una crida a "super" a la primera línia del constructor de "PrimarySchool". Passeu-hi qualsevol argument que utilitzi el constructor pare.
+
+4. Ja que aquesta és la classe "Primaria", passa 'primaria' com a argument pel paràmetre "nivell" en el constructor pare.
+
+5. Utilitza l'argument restant per establir la propietat "politicaMenjador".
+
+6. Com que la nostra classe "Primaria" hereta les propietats i getters de "Escola", només hem de crear un nou getter a la classe "Primaria". Afegeix aquest getter a la classe "Primaria". Cada getter ha de retornar el valor emmagatzemat a aquesta propietat.
+
+A continuació, t'atreveixes amb la classe "Secundaira" i "Batxillerat" que hereta de la classe "Escola" també? A més de les propietats, els getters i els mètodes de "Escola", la classe "Secundaria" inclou:
+
+- Propietats: "sportsTeams" (conjunt de cadenes de text).
+- Getters: Un getter per al conjunt "sportsTeams". El getter ha de registrar totes les disciplines esportives al console.
+
+### 3a Part
