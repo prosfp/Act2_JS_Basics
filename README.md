@@ -62,10 +62,10 @@ function repeatString(str, num) {
 Tests:
 
 ```javascript
-repeatString('JavaScript', 0); // ''
-repeatString('university', 1); // 'university'
-repeatString('hello', 3); // 'hellohellohello'
-repeatString('?', 10); // '??????????'
+repeatString("JavaScript", 0); // ''
+repeatString("university", 1); // 'university'
+repeatString("hello", 3); // 'hellohellohello'
+repeatString("?", 10); // '??????????'
 ```
 
 ### Kata #3. Elimina el primer i l’últim caràcter
@@ -81,10 +81,10 @@ function removeFirstAndLast(str) {
 Tests:
 
 ```javascript
-removeFirstAndLast('JavaScript'); // 'avaScrip'
-removeFirstAndLast('Alexandria'); // 'lexandri'
-removeFirstAndLast('hydrogen'); // 'ydroge'
-removeFirstAndLast('ok'); // 'ok'
+removeFirstAndLast("JavaScript"); // 'avaScrip'
+removeFirstAndLast("Alexandria"); // 'lexandri'
+removeFirstAndLast("hydrogen"); // 'ydroge'
+removeFirstAndLast("ok"); // 'ok'
 ```
 
 ### Kata #4. Elimina els espais en blanc
@@ -100,9 +100,9 @@ function removeSpaces(str) {
 Tests:
 
 ```javascript
-removeSpaces('good morning'); // 'goodmorning'
-removeSpaces(' carrot cake '); // 'carrotcake'
-removeSpaces('the abbot gave rice to the fox'); // 'theabbotgavericetothefox'
+removeSpaces("good morning"); // 'goodmorning'
+removeSpaces(" carrot cake "); // 'carrotcake'
+removeSpaces("the abbot gave rice to the fox"); // 'theabbotgavericetothefox'
 ```
 
 ### Kata #5. Scope i closure
@@ -132,8 +132,8 @@ Implementa l'objecte `tree` amb les propietats `species` amb valor "appleTree" i
 
 ```javascript
 const tree = {
-  species: 'appleTree',
-  fruit: 'apple',
+  species: "appleTree",
+  fruit: "apple",
 };
 ```
 
@@ -170,8 +170,8 @@ Modifica la funció anterior perquè estigui implementada dins de l'objecte `tre
 
 ```javascript
 const tree = {
-  species: 'appleTree',
-  fruit: 'apple',
+  species: "appleTree",
+  fruit: "apple",
   getFruit() {
     // Escriu aquí la teva solució
   },
@@ -199,7 +199,7 @@ function plantTree(species, fruit) {
 Tests:
 
 ```javascript
-plantTree('pearTree', 'pear'); // { species: 'pearTree', fruit: 'pear' }
+plantTree("pearTree", "pear"); // { species: 'pearTree', fruit: 'pear' }
 ```
 
 #### Kata #7.2
@@ -215,7 +215,7 @@ function plantTree(species, fruit) {
 Tests:
 
 ```javascript
-const tree = plantTree('pearTree', 'pear');
+const tree = plantTree("pearTree", "pear");
 tree.getFruit(); // 'pear'
 tree.getSpecies(); // 'pearTree'
 ```
@@ -266,9 +266,9 @@ const tree = {
 Tests:
 
 ```javascript
-tree.fruit = 'apple';
+tree.fruit = "apple";
 tree.fruit; // 'apple'
-tree.species = 'appleTree';
+tree.species = "appleTree";
 tree.species; // 'appleTree'
 ```
 
@@ -293,7 +293,7 @@ String.prototype.mevaFuncio = function () {
 Tests:
 
 ```javascript
-const frase = 'la meva primera frase. la meva segona frase';
+const frase = "la meva primera frase. la meva segona frase";
 tree.mevaFuncio(frase); // Ha de mostrar "La meva primera frase. La meva segona frase."
 ```
 
@@ -310,7 +310,7 @@ La sentència **throw** s'utilitza per llançar un error manualment. Això perme
 ```javascript
 function divideix(a, b) {
   if (b === 0) {
-    throw new Error('No es pot dividir per zero');
+    throw new Error("No es pot dividir per zero");
   }
   return a / b;
 }
@@ -418,7 +418,7 @@ class Dog extends Animal {
   }
 }
 
-const myDog = new Dog('Bobby');
+const myDog = new Dog("Bobby");
 myDog.speak(); // Output: "Bobby fa guau guau."
 ```
 
@@ -484,7 +484,7 @@ Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplen
 
 5. Utilitza l'argument restant per establir la propietat "politicaMenjador".
 
-6. Com que la nostra classe "Primaria" hereta les propietats i getters de "Escola", només hem de crear un nou getter a la classe "Primaria". Afegeix aquest getter a la classe "Primaria". Cada getter ha de retornar el valor emmagatzemat a aquesta propietat.
+6. Com que la nostra classe "Primaria" hereta les propietats i getters de "Escola", només hem de crear un nou getter a la classe "Primaria". Afegeix aquest getter a la classe "Primaria" i fer que retorni un string amb la política del menjador (per ex: "Menjador opcional. Menu vegetarià"). Cada getter ha de retornar el valor emmagatzemat a aquesta propietat.
 
 A continuació, t'atreveixes amb la classe "Secundaria" i "Batxillerat" que hereta de la classe "Escola" també? A més de les propietats, els getters i els mètodes de "Escola", la classe "Batxillerat" inclou:
 
@@ -515,3 +515,170 @@ Anem a crear **instàncies** de la nostra classe. Recordem que això ens permet 
 5. Comprova que pots obtenir el llistat de disciplines esportives!
 
 # GOOD JOOOOOOB!!!
+
+# WEEKEND BONUS TRACK: Kata #13. Moduls - Message Mixer
+
+Message Mixer Inc. ofereix un servei de xifrat de missatges que transforma el text d'entrada mitjançant diversos xifrats i mostra el missatge xifrat a la consola.
+
+Aquest servei proporciona tres mètodes de xifrat diferents:
+
+1. Un "Caesar Cipher" en què els caràcters del missatge d'entrada es desplacen alfabèticament una quantitat determinada.
+2. Un "Symbol Cipher" en què alguns caràcters seleccionats del missatge d'entrada es substitueixen per símbols visualment similars.
+3. Un "Reverse Cipher" en què cada paraula del missatge d'entrada es gira in situ.
+
+Per fer servir aquest servei, executa la comanda següent:
+
+```
+node message-mixer.js ['caesar'|'symbol'|'reverse'] [amount]
+```
+
+Aquí tens alguns exemples d'execució d'aquest programa:
+
+```
+$ node message-mixer.js caesar 4
+Introduïu el missatge que voleu xifrar...
+> hello world
+
+Aquest és el vostre missatge xifrat:
+> lipps asvph
+
+$ node message-mixer.js 'reverse'
+Introduïu el missatge que voleu xifrar...
+> hello world
+
+Aquest és el vostre missatge xifrat:
+> olleh dlrow
+```
+
+En l'actualitat, Message Mixer Inc. ven el seu servei de xifrat com un programa en un sol fitxer anomenat `message-mixer.js`. Aquest sol fitxer inclou:
+
+- Les funcions que realitzen els xifrats esmentats anteriorment.
+- El codi per obtenir l'entrada de l'usuari.
+- El codi per mostrar la sortida a l'usuari.
+
+Message Mixer Inc. vol unir-se a la comunitat d'open-source permetent que altres desenvolupadors importin les seves funcions de xifrat als seus propis projectes.
+
+En aquest projecte, ajudaràs Message Mixer Inc. a extreure i aïllar les seves funcions de xifrat en un mòdul anomenat `encryptors.js`, i després refactoritzaràs `message-mixer.js` per fer servir les funcions d'aquest mòdul.
+
+Abans de començar, prova d'executar les comandes que es mostren més amunt al terminal. A continuació, familiaritza't amb com funciona el programa examinant els tres fitxers del directori de fitxers, amb un enfocament especial en `message-mixer.js`. A la part superior d'aquest fitxer trobaràs les tres funcions de xifrat de text. Cap al final del fitxer, hi ha codi que fa servir les variables d'entorn `process.argv`, `process.stdin`, i `process.stdout` per determinar quin mètode de xifrat fer servir, analitzar l'entrada de l'usuari i mostrar el missatge xifrat.
+
+Aquí tens les instruccions en català per resoldre l'exercici:
+
+**Extreure les funcions de xifrat**
+
+1. Les tres funcions de xifrat que Message Mixer Inc. vol compartir estan definides a `message-mixer.js`. Són les següents:
+
+   - `caesarCipher()`
+   - `symbolCipher()`
+   - `reverseCipher()`
+
+   Primer, copia les definicions d'aquestes tres funcions a `encryptors.js`. Després, guarda `encryptors.js`.
+
+2. Ara, per convertir `encryptors.js` en un mòdul, les seves funcions han de ser exportades.
+
+   A dins de `encryptors.js`, assigna cada funció de xifrat com una propietat de l'objecte `module.exports`.
+
+**Refactoritza el teu codi per utilitzar les funcions exportades**
+
+3. Ara que has mogut les funcions de xifrat a `encryptors.js` i les has exportades, ara tens aquestes funcions duplicades.
+
+   Primer, elimina les definicions d'aquestes tres funcions de `message-mixer.js`.
+
+   Com a resultat, només hauries de tenir la lògica d'entrada i sortida de l'usuari. A més, l'execució del programa ara produirà errors de referència.
+
+4. Ara pots reemplaçar les funcions eliminades important-les des de l'arxiu `encryptors.js`.
+
+   Hi ha diverses maneres de fer això, no obstant, l'enfocament suggerit evitarà fer modificacions a la lògica d'entrada/sortida.
+
+   A la part superior de `message-mixer.js`:
+
+   - Declara una nova variable anomenada `encryptors`.
+   - Després, importa l'objecte `module.exports` de `encryptors.js` i assigna l'objecte importat a `encryptors`.
+
+5. L'objecte `module.exports` de `encryptors.js` ara està emmagatzemat a la variable `encryptors`.
+
+   Extreu els tres mètodes de xifrat de `encryptors` i emmagatzema'ls en tres variables: `caesarCipher`, `symbolCipher` i `reverseCipher`.
+
+6. Bé fet! Si has completat els passos correctament, ara hauries de ser capaç d'executar el programa de nou. Per exemple, intenta executar aquesta comanda al terminal:
+
+   ```
+   node message-mixer.js caesar 4
+   ```
+
+   I després, quan et demani, escriu el següent missatge:
+
+   ```
+   > cnawp fkx!
+   ```
+
+   Mouent les funcions de xifrat a un mòdul separat i exportant-les, has separat les preocupacions del programa, el que el fa més organitzat i fàcil de navegar. A més, ara pots utilitzar aquests mètodes de xifrat per construir un altre programa!
+
+**Crea un nou programa utilitzant el mòdul**
+
+7. Els desenvolupadors de Super Encoder LLC han sentit parlar del mòdul `encryptors.js` que acabes de publicar i volen fer servir les teves funcions de xifrat per crear un nou programa.
+
+   Els desenvolupadors de Super Encoder volen que l'usuari pugui utilitzar el seu programa per xifrar missatges i desxifrar-los mitjançant les comandes següents:
+
+   ```
+   node super-encoder.js encode
+   ```
+
+   i
+
+   ```
+   node super-encoder.js decode
+   ```
+
+   Intenta executar aquestes comandes. Actualment mostren "undefined".
+
+8. Obre `super-encoder.js`, on veuràs que la lògica d'entrada/sortida ja està definida.
+
+   A la part superior del fitxer, hauries de veure que les funcions `encodeMessage()` i `decodeMessage()` estan incompletes. Serà la teva tasca fer servir les funcions de xifrat per completar aquestes dues funcions.
+
+   Primer, a la part superior de `super-encoder.js`, importa les funcions de xifrat `caesarCipher()`, `symbolCipher()` i `reverseCipher()` de l'arxiu `encryptors.js`.
+
+9. Utilitza els tres mètodes de xifrat per completar la funció `encodeMessage()` passant el paràmetre d'entrada `str` a una funció de xifrat i després passant el valor retornat a la següent funció de xifrat. `encodeMessage()` hauria de retornar el missatge codificat final.
+
+   Algunes pautes:
+
+   - Has d'utilitzar cada funció de xifrat com a mínim una vegada.
+   - És a teva elecció en quin ordre utilitzes les funcions de xifrat.
+   - També pots reutilitzar les funcions de xifrat per codificar el missatge.
+   - `caesarCipher()` requereix un argument `amount`. Tria algun número entre 0 i 26 per a aquest argument i recorda la teva elecció per a `decodeMessage()`.
+   - Quan hagis acabat, prova d'executar el programa de la següent manera:
+
+     ```
+     $ node super-encoder.js encode
+     ```
+
+10. El descodificar és el procés de prendre un missatge codificat i determinar el missatge original mitjançant la reversió del procés de codificació.
+
+    Per exemple, fent servir `message-mixer.js`, podem codificar el missatge 'hello world' fent servir un xifrat de Cèsar amb un nombre de 4 com així:
+
+    ```
+    $ node message-mixer.js caesar 4
+    Introduïu el missatge que voleu xifrar...
+    > hello world
+
+    Aquest és el vostre missatge xifrat:
+    > lipps asvph
+    ```
+
+    Per a desxifrar el missatge 'lipps asvph', podem executar el programa en sentit contrari, com així:
+
+    ```
+    $ node message-mixer.js caesar -4
+    Introduïu el missatge que voleu xifrar...
+    > lipps asvph
+
+    Aquest és el vostre missatge xifrat:
+    > hello world
+    ```
+
+    Ara, a
+
+`super-encoder.js`, defineix `decodeMessage()` per proporcionar una funció que inverteixi la codificació de `encodeMessage()`.
+
+11. Si has completat tots els passos correctament, ara hauries de ser capaç de codificar el missatge "hello world" per produir un missatge codificat. Després, hauries de ser capaç de prendre el missatge codificat i desxifrar-lo per obtenir "hello world" de nou.
+
+    Al terminal, executa el programa `super-encoder.js` per provar el teu codi.
