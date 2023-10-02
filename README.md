@@ -424,7 +424,7 @@ myDog.speak(); // Output: "Bobby fa guau guau."
 
 A DESENVOLUPAR:
 
-###Catàleg Educació
+### Catàleg Educació
 
 El Departament d'Educació vol un catàleg de referència ràpida per a cada escola del territori.
 
@@ -453,7 +453,7 @@ Hem de crear classes per a escoles primàries i secundàries. Ja que aquestes cl
 
 Crea el constructor() i els getters per a les quatre classes anteriors.
 
-####1a Part
+#### 1a Part
 
 1. Crear Classe Escola Mare: Comencem creant una classe mare per a les classes Primària, Secundària i Batxillerat. Crea una classe buida anomenada "Escola".
 
@@ -472,7 +472,7 @@ Crea el constructor() i els getters per a les quatre classes anteriors.
 
 Dins el mètode, genera una manera de triar aleatòriament dins professorsSuplents. Utilitza aquest número per accedir i retornar el professor suplent a l'índex generat aleatòriament.
 
-### 2a Part
+#### 2a Part
 
 1. Crea una classe buida "Primaria" que hereti de "Escola".
 
@@ -492,7 +492,7 @@ A continuació, t'atreveixes amb la classe "Secundaria" i "Batxillerat" que here
 
 - Getters: Un getter per al conjunt "equipsEsportius". El getter ha de mostrar tots els euips o disciplines esportives al console.
 
-### 3a Part
+#### 3a Part
 
 Anem a crear **instàncies** de la nostra classe. Recordem que això ens permet crear múltiples objectes amb les mateixes propietats i mètodes. Cada instància d'una classe és un objecte amb el seu propi estat, i que per tant es poden tenir objectes amb diferents valors per les seves propietats.
 
