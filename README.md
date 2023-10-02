@@ -1,4 +1,4 @@
-# Act2_JS_Basics - Kata de Dojo's
+# Act2_JS_Basics - Kata's de Dojo
 
 Farem servir aquest repositori per:
 
