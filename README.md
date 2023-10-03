@@ -294,7 +294,7 @@ Tests:
 
 ```javascript
 const frase = "la meva primera frase. la meva segona frase";
-tree.mevaFuncio(frase); // Ha de mostrar "La meva primera frase. La meva segona frase."
+frase.mevaFuncio(); // Ha de mostrar "La meva primera frase. La meva segona frase."
 ```
 
 ### Kata #9. Gestió d'errors
