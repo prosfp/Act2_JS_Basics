@@ -381,9 +381,9 @@ A continuació et proposo el següents reptes:
 
 - **Informació de Navegador amb navigator**: Crea una secció a la pàgina que mostri **informació sobre el navegador de l'usuari**. Amb **Navigator** pots accedir a propietats com userAgent, platform, language, etc., i mostra aquestes dades a la pàgina. També dona a conèixer les extensions instal·lades a l'ordinador.
 
-- **Canviar el Títol de la Pàgina amb document:** Afegeix un camp d'entrada de text i un botó. Utilitza l'objecte **document** per canviar el títol de la pàgina quan es fa clic al botó. El nou títol ha de ser el text introduït per l'usuari al camp d'entrada. Redireccionar amb location:
+- **Canviar el Títol de la Pàgina amb document:** Afegeix un camp d'entrada de text i un botó. Utilitza l'objecte **document** per canviar el títol de la pàgina quan es fa clic al botó. El nou títol ha de ser el text introduït per l'usuari al camp d'entrada. 
 
-- Afegeix un altre botó que digui "Ves a Google". Utilitza l'objecte **location** per redirigir l'usuari a la pàgina d'inici de Google quan es fa clic al botó. Comprova si l'usuari està connectat a Internet abans de redirigir-lo.
+- **Redireccionar amb location:** Afegeix un altre botó que digui "Ves a Google". Utilitza l'objecte **location** per redirigir l'usuari a la pàgina d'inici de Google quan es fa clic al botó. Comprova si l'usuari està connectat a Internet abans de redirigir-lo.
 
 ### Kata #12. Classes
 
